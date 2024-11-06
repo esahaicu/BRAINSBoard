@@ -1,5 +1,7 @@
 # BRAINSBoard
 
+# Introduction
+
 # STG5 and BRAINSBoard GUI
 ### This will be a quick guide on how to use all the different tools developed for the BRAINSBoard, STG5 and more!
 ![Top of the Board](images/BRAINSBoard_Side_Profile.png)
