@@ -1,4 +1,7 @@
 # BRAINSBoard
+
+![BRAINSBoardRender](images/BRAINSBoardFinalProfile.png)
+
 # Abstract
 
   **Objective:** Multipolar Intracranial Electrical Brain Stimulation (ICBS) is a promising method increasingly explored for use in both closed-loop neuromodulation experiments and clinical treatments for neurological diseases. Current tools for multipolar ICBS face several limitations that hinder exploratory research: high entry costs, lack of flexibility in managing different stimulation parameters and electrodes, absence of an open-source, customizable platform, and often an overabundance of features unnecessary for single-unit level exploratory research. These constraints limit the progress in understanding and applying multipolar ICBS effectively. To address these challenges, we developed the Bioelectric Router for Adaptive Isochronous Neuro Stimulation (BRAINS) Board.
