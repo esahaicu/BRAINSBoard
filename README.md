@@ -229,47 +229,6 @@ With that said, there are only a few changes in terms of the pinout when program
 
 The GPIO code uses these and just takes 16 individual strings as channel_state = [...] with **F** for **FLOATING**, **C** for **CATHODE**, **A** for **ANODE**, and **G** for **SIGNAL GROUND** and the delay can be set using the precise_sleep function. Use general Python functionality to be able to program this any which way.
 
-# SECTION 3: STG5
-
-The stimulator of choice for this project is the [Multi Channel Systems STG5](https://www.multichannelsystems.com/products/stg5-base). This product has all the stimulating capabilities that we require for our electrophysiology experiments, can both recieve external triggers and produce a digital output that can be aligned with an analog stimulus sent, and is most importantly programmable beyond the base software that comes with the STG5. We designed our own custom GUI to perform stimulation experiments for monopolar, bipolar, and multipolar stimulation that can be paired with the BRAINS Board. Lets break down the various features of our GUI:
-
-## FEATURE 1: LOCALHOST WEB GUI:
-
-The GUI is all written in Python, but utilizes the [Holoviz Panel Library](https://panel.holoviz.org/index.html) to setup a locally hosted Web GUI that can run on any device
-**IMPORTANT NOTE:** THE GUI MUST BE RUN ON A WINDOWS DEVICE IN ORDER TO CONNECT WITH THE STG5 GUI
-**IMPORTANT NOTE 2:** THE MCSUsbNet .dll package must be setup from [here](https://github.com/multichannelsystems/McsUsbNet/tree/086642d15fa1b8b805cdc137db4652151c30f9f5) in order to work. Ensure that the packages and files in the MCSUsbNet folder in this repository have all the required permissions to run, otherwise there will be errors.
-
-**Once everything is setup, run the [STG5 and BRAINS Board Joint GUI](STG5_BRAINSBoard_Joint_GUI.py) Python Script to start up the GUI so that you can manipulate the next features
-
-## FEATURE 2: EVENT SETTINGS:
-
-When you first run the GUI, the *EVENT SETTINGS* tab will be the primary tab opened. You will notice the following:
-- First you will have the *Waveform Type Selector* that has three options: **Monophasic**, **Biphasic**, and **Sinusoidal**
-- You will have the *Modulation Type Selector* directly underneath it, giving the options of sending a set **Voltage** or **Current** from the STG5
-- You then have the *Amplitude Selection* underneath those two Radio Buttons
-  - On the left is the *Amplitude Slider* where you can easily set the numeric value for your Amplitude
-  - Next to the slider, you get the *Unit Selector*, which gives you the option of setting the units of your waveform. If **Voltage** is selected from your *Modulation Type Selector*, your options are **uV**, **mV** or **V** and if **Current** is selected from your *Modulation Type Selector*, your options are **uA**, **mA**, or **A**.
-  - You also have the *Randomize* slider and button, which allows you to choose a range and randomize the amplitude of your waveform when the random button is clicked.
-- If **Monophasic** or **Biphasic** is selected:
-  - There is a *Pulse Duration Slider* and *Unit Selector Button* for setting the Pulse Duration in microseconds, milliseconds, or seconds
-  - If **Biphasic** specifically is selected, there will be text stating whether the waveform is **Cathode Leading**, **Anode Leading**, or **Neither** and it is **IMPORTANT TO NOTE: THE PULSE DURATION IS SET FOR ONE HALF OF THE WAVEFORM, NOT TOTAL PUSLE DURATION**
-  - You also get a *Randomizer* pulse duration if needed.
-- If **Sinusoidal** is selected:
-   - You get a *Wavelength Type Selector* that gives you the option to choose between setting the Period or Frequency of the Waveform, with a *Wavelength Slider* with the same functionality as other sliders with a *Unit Selector* and *Randomizer*
-   - There will also be a conversion printed at the bottom with either Frequency or Period, opposite of what is selected in the selector
-- There is also a *Number of Events* input, normally set to 1.
-   - If set to one, nothing else needs to be done
-   - If set >1, there will be an option to set a duration between events using the *duration between events slider* with both *unit selection* and *randomize* functionality.
-This is all the settings for one "event", giving basic functionality for setting up a waveform.
-
-## FEATURE 2: TRAIN SETTINGS
-This feature is established to allow you to repeat events as individual trains for however many trains are needed for an experiment. The following can be set:
-- First and foremost is the *External Trigger checkbox* that allows you to start a train based on an external trigger recieved by the STG5. Functionality of this function is still in the process of being built.
-- Next is the *Number of Trains Input* that allows you to set the number of trains in one run
-- If more than 1 train in set, you can then use the *Time Between Trains* slider to set the amount of **time between the start of one train to the start of the next train** (ensure this is bigger than the total time of one event) that also has *unit selection* and *randomize* features.
-
-## FEATURE 3: EXTERNAL SIGNAL SETTINGS
-This feature allows you to send out an external digital signal from a channel of the STG5 of any specified length at the beginning of every train. This is done using the *External Signal Slider* with *unit selection* and *randomize* functionality.
 
 # REFERENCES
 [1]	B. D. Greenberg et al., “Three-Year Outcomes in Deep Brain Stimulation for Highly Resistant Obsessive–Compulsive Disorder,” Neuropsychopharmacology, vol. 31, no. 11, pp. 2384–2393, Nov. 2006, doi: 10.1038/sj.npp.1301165.
