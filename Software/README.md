@@ -33,6 +33,10 @@ The following pins correspond to channels above:
 
 **The logic is this way because of the following:**
 
+<p align="center">
+<img src=/Software/images/signalDemo.png/>
+</p>
+
 - Our **Output Enable** pin, that is connected to all 4 of the Octal Latches, is connected to **Arduino Pin 16**
 - We have 4 **Latch Enable** pins that are used to determine which latch we are controlling
   - **Pin 1** is connected to the first **OCTAL LATCH**, which controls signals sent to the **SP3T** switches that set channel configuration for **Electrode Channels 1-4**
@@ -58,6 +62,12 @@ The code also has 4 states that any channel can be set to at any given moment: *
 **Important Note:** The **SIGNAL GROUND** is connecting any signal connected to the $\textbf{\color{green}Green Banana Connector}$, which should ideally connected to the same **Reference Ground** that you would use for any electrophysiology or stimulation experiment.
 
 ### Serial Communication Logic:
+
+<p align="center">
+<img src=/Software/images/serialCommandDemo.png/>
+</p>
+
+
 **The following is a step-by-step guide for utilizing any serial communication to control the channel outputs at any given time**
 1. Ensure you are using 115200 bps as the data rate for for Serial line
 2. '[' Begins reading channel Data
@@ -95,7 +105,12 @@ The code also has 4 states that any channel can be set to at any given moment: *
 The BRAINS Board was initially designed to directly integrate the various connections on a Raspberry Pi to map pins to channels and work harmoniously as a modular device that can work alongside other tools in an experimental setting. There are both benefits and drawbacks to using this microcontroller over an Arduino, laid out as follows:
 #### BENEFITS:
 1. BRAINS Board easily snaps into a Raspberry Pi, no external connection is needed
-2. Any pins not used to directly control the logic of the BRAINS Board can be easily accessed through the side male pins, following the pinout shown above in [this image](images/BB_2_external_pins_Pinout.png)
+2. Any pins not used to directly control the logic of the BRAINS Board can be easily accessed through the side male pins, following the pinout shown here:
+
+<p align="center">
+<img src=/Software/images/pinoutConfig.png/>
+</p>
+
 3. Doesn't rely on Serial Communication to switch pinout, which can reduce latency
 4. Allows for communication over WiFi which allows for non-wired control to directly switch channels
 **When Using This Microcontroller Is Better:** The ideal use for the Raspberry Pi over an Arduino is when you are just reading an external signal or series of them and want to create a closed loop transition between channels based on multiple complicated inputs feeding directly into the Raspberry Pi, given that those inputs are able to be read by the Linux system and processed that way, **OR** when latency isn't very important but non-wired communication is essential or easier. 
