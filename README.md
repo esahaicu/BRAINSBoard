@@ -24,6 +24,36 @@ The scientific community currently lacks access to flexible, open-source, cost-e
 
 To address these challenges, we developed a modular and readily reprogrammable interface - the Bioelectric Router for Adaptive Isochronous Neuro Stimulation (BRAINS) Board for control of electrical brain stimulation. This system enables rapid switching and multipolar stimulation while maintaining compatibility with existing monopolar and bipolar stimulation experimental frameworks. Our approach prioritizes accessibility, flexibility, and signal isolation while keeping costs aligned with standard experimental setups.   
 
+# Hardware
+
+The BRAINSBoard uses a custom designed PCB to ensure that:
+ 1) Output signal to the electrode array remains **isolated** with little to no leak or loss of current
+ 2) Channels can be set and changed **rapidly (~600Hz)**
+ 3) Channels can be controlled using any microcontroller and can be customizable
+
+The BRAINSBoard is easy to plug into many up to 16-channel stimulation setups for experiments and can customizably recieve and communicate information to and from other devices in a setup. A current setup looks like:
+
+<p align="center">
+ <img src=/Hardware/images/BRAINSBoardSetup.png>
+</p>
+
+If you want to BUILD YOUR OWN:
+Use the <a href="/Hardware/BRAINSBoard%20Production%20Files">following folder</a>, which has everything required to submit the PCB to a manufacturer to be processed.
+
+For a more in-depth explanation of the schematic and setup of this board, <a href="/Hardware">look here</a>!
+
+# Software
+
+We have designed this to be compatible and easily programmed by any microcontroller. We have prewritten code to pair with an Arduino Pro Micro with the following configuration:
+
+<p align="center">
+ <img src=images/BB2ProMicro_bb.png/>
+</p>
+
+Use the <a href="/Software/arduinoProMicroBRAINSBoard">following folder</a>, which has code that can be downloaded onto an Arduino Pro Micro.
+
+The guide and description on how to easily control the board is <a href="/Software">here</a>!
+
 # General Results
 
 Hey! General results that will be good to prominently display as well as maybe setup pics could be great!
