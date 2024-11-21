@@ -1,4 +1,4 @@
-# BRAINSBoard
+# BRAINSBoard *HARDWARE*
 
 <p align="center">
  <img src=/Hardware/images/BRAINSBoardSchematic.png/>
@@ -8,8 +8,6 @@
 <i>Illustrated Schematic of the BRAINSBoard</i>
 </p>
 
-
-# SECTION 1: HARDWARE
 ## Purpose
 
 The BRAINSBoard is a proprietary custom PCB that is designed to electronically switch between Cathode, Anode, Ground, and Floating states for 16 different electrode channels without physically interacting with the components during experiments. This enables:
@@ -17,13 +15,17 @@ The BRAINSBoard is a proprietary custom PCB that is designed to electronically s
 - Grounding of every inactive pin to prevent noise.
 - Use with a GUI designed for efficient pin switching during and between experiments.
 
-### Components of the Board
+## Components of the Board
 
 The exact components are also all listed in the <a href="/Hardware/BRAINSBoard%20Production%20Files/BRAINSBoard_BOM.xlsx">Bill Of Materials</a> and can be produced using the Gerber and board files in the <a href="/Hardware/BRAINSBoard%20Production%20Files">BRAINSBoard Production Files Folder</a>
 
 We will break down the components here with a general explanation of their benefits!
 
-#### Connectors
+<p align="center">
+ <img src=/images/BRAINSBoard_Top_Labelled.png/>
+</p>
+
+## Connectors
 - $\textbf{\color{yellow}Raspberry Pi/Arduino 2x20 Female Header}$ facilitates connections to control and process data from Arduino/Raspberry Pi. $\textbf{\color{yellow}2x20 90º Male Header}$ allows external connections to unused/useful pins
   - A Raspberry Pi 4B can be directly connected on top of the $\textbf{\color{yellow}2x20 Female Header}$. Connection Pinout as follows:
 
@@ -43,7 +45,7 @@ We will break down the components here with a general explanation of their benef
 ![Box Headers Pinout](/images/eStim_CONNECTORS.png)
 - $\textbf{\color{red}Banana Connectors:}$ Connects to cathode and anode pulses from an Isolated Analog Power Stimulator (preferred STG5) and a Signal Ground that can be connected to the same common ground as the electrode and stimulator.
 
-#### External Outputs:
+## External Outputs:
 
 $\textbf{\color{yellow}External Connectors:}$
 
@@ -65,30 +67,30 @@ $\textbf{\color{red}Connectors to Analog Stimulus Isolator:}$
 
 [Anode Stimulus Connector](https://www.digikey.com/en/products/detail/pomona-electronics/73099-0/10483460)
 
-### Electronics for Selecting Channels:
+## Electronics for Selecting Channels:
 
 The following are used to be able to utilize Arduino Logic and rapidly change the connection between our stimulus signal from the isolated stimulator and the respective electrode channels.
 
-#### $\textbf{\color{#FF69B4}Octal Transparent D-Type Latch}$
+### $\textbf{\color{#FF69B4}Octal Transparent D-Type Latch}$
 - Requires a VCC +5V and ground.
 - Output Enable and Latch Enable controls, connected to Arduino/Raspberry Pi, to manage pin outputs.
 - Utilizes multiplexing capabilities to reduce connections needed to the microcontronoller and allows for future scalability.
 - Latch capabilities ensure channel selection stability until change is required.
 - [Texas Instruments Octal Transparent D-Type Latch](https://www.digikey.com/en/products/detail/texas-instruments/CY74FCT373TSOC/1508737)
 
-#### $\textbf{\color{orange}Analog SP3T Switch}$
+### $\textbf{\color{orange}Analog SP3T Switch}$
 - Two inputs determine the current path (cathode, anode, ground, or floating).
 - Output directed through a connector managing pin outputs.
 - Useful digital switch to ensure one of the four output states is set at all times.
 - [Texas Instruments Analog SP3T Switch](https://www.digikey.com/en/products/detail/texas-instruments/TS5A3357DCUR/695801)
 
-#### $\textbf{\color{cyan}Solid State Relay}$
+### $\textbf{\color{cyan}Solid State Relay}$
 - Activated by a control switch, it powers an LED internally, which in turn activates a photosensitive diode to close the circuit.
 - Optical Isolation prevents electrical interference from the microcontroller side of the circuit to the Analog Isolator stimulus sent to the respective channels.
 - These specific Solid State Relays will be useful in handling high variance in Volatge due to unpredictable resistance in the brain as current stimulus is sent.
 - [IXYS 600V 100mA Dual Single Pole Normally Open Relay](https://www.digikey.com/en/products/detail/ixys-integrated-circuits-division/PAA193STR/3077694)
 
-#### $\textbf{\color{green}LEDS}$
+### $\textbf{\color{green}LEDS}$
 - Top LED is a $\text{\color{red}RED LED}$ that is utilized to indicate whether or not the BRAINS Board is receiving power.
 - Bottom LED is a $\text{\color{green}GREEN LED}$ that is utilized to indicate whether the Output Enable is activated, determining whether or not outputs are being sent to change channels
 
