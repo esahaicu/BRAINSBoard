@@ -9,7 +9,11 @@ These are guides on how they are designed as well as a simple measure as to how 
 
 The current BRAINS Board API is built around Serial Inputs that are translated into pin activation using the [Brainsboard Serial Program Arduino Code](brainsboard_serial_pgm.ino)
 
-This is also all right now designed to be used alongside an Arduino Micro Pro with the pinout shown above in [this image](images/BB2ProMicro_bb.png), though it can easily be changed to work with any Arduino board and pinout using the #define functions.
+This is also all right now designed to be used alongside an Arduino Micro Pro with the pinout shown below, though it can easily be changed to work with any Arduino board and pinout using the #define functions.
+
+<p align="center">
+<img src=/Software/images/pinoutConfig.png/>
+</p>
 
 The following pins correspond to channels above:
 | Electrode Channel |    Arduino Pins     |
