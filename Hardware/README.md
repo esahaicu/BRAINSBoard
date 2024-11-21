@@ -4,7 +4,10 @@
  <img src=/Hardware/images/BRAINSBoardSchematic.png/>
 </p>
 
-*Illustrated Schematic of the BRAINSBoard*
+<p align="center">
+<i>Illustrated Schematic of the BRAINSBoard</i>
+</p>
+
 
 # SECTION 1: HARDWARE
 ## Purpose
