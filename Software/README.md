@@ -1,4 +1,4 @@
-# BRAINSBoard Software
+# BRAINSBoard *Software*
 
 ## BRAINS BOARD SPECIFIC SOFTWARE
 
