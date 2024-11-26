@@ -58,6 +58,20 @@ The guide and description on how to easily control the board is <a href="/Softwa
 
 Hey! General results that will be good to prominently display as well as maybe setup pics could be great!
 
+# Future Directions
+
+Look forward <a href=https://github.com/esahaicu/BRAINSBoard/>HERE</a> for more updates on the BRAINSBoard that are based on, but not limited to, the following key improvements and a future timeline:
+
+### By January 2025 - BRAINSBoard V3
+
+1. Switching the <a href="https://cdn1-originals.webdamdb.com/14154_151801265?cache=1732603283&response-content-disposition=inline;filename=PAA193.pdf&response-content-type=application/pdf&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTQxNTRfMTUxODAxMjY1P2NhY2hlPTE3MzI2MDMyODMmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9UEFBMTkzLnBkZiZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24vcGRmIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoyMTQ3NDE0NDAwfX19XX0_&Signature=KEhrRK-vYwk0ggFpEj8wrtBzJmtt7BLaQpuE0VpQ6zIkfrLoIbx35HtgxQp~mzP1G8wXjwMnEd2zExPyTWqPD8bcKLJTfQP483ssKtQgMZSv9g4kMZWmTeWzq72~uDpBGg3QDFOSoxpoQ4pNKS8JEbIiLR73WmyYWHy~x8HXiKn1oemtWMO5ZJkIW832eBlLtIbZF6mad9GiruNMyseB5M5vAtnD5xpdgm85AQOtLEowx-~A6fRC1GCmJKfGsC2NgjsDT588YpRlWTskNJhZ7zaYhGDO9GeALtxS0ZmNQy8JBUkahIwGCS4s0QiuV7Lvj7qD-rCDa4SswuSvqyvkgw__&Key-Pair-Id=APKAI2ASI2IOLRFF2RHA">current Solid State Relay</a> to a <a href="https://cdn1-originals.webdamdb.com/12956_135154079?cache=1729648393&response-content-disposition=inline;filename=OAA160.pdf&response-content-type=application/pdf&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTI5NTZfMTM1MTU0MDc5P2NhY2hlPTE3Mjk2NDgzOTMmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9T0FBMTYwLnBkZiZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24vcGRmIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoyMTQ3NDE0NDAwfX19XX0_&Signature=AXHYEUwQeGlJv0wT-6YeKM1RikhenEa59iUFNI39tTOkFUg2SDUpqC-E0H8ncd0Q7HQ08yBqlckWgHi77eyu01f4YnqluGsyMgwveAA9lgVK35F8CKfdHTVbH9U3SGNk3P30u9mg-Cwjt3lLbItZ5srsjdkrtmY~ygdudVYNud--zzGRss3OerThwrDle2YjYWR0AnRQs9qA01ERjdj3iEWlwWsxjy~kbYyX732hxke7vOttaN5PPq~9jG1AofzusaQnYLKNld86RVlLb~SNYGWz9AfdbnLhnX-XlATFZXGDKhS-sPZHe1oXKVAZrJjDEzQASST77NQPldvNG~NaTg__&Key-Pair-Id=APKAI2ASI2IOLRFF2RHA">better Solid State Relay</a> for microstimulation with the current devices.
+  - The current SSR has two key issues noted in this version 2 of the BRAINSBoard:
+    - ***10µA leak current*** on the isolated channels that is solved in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section </a> under issue #1 **vs** a ***250nA leak current*** in the newer Solid State Relay
+    - ***50pF output capacitance*** on the isolated channels that is solved in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section </a> under issue #1 **vs** a ***5pF leak current*** in the newer Solid State Relay
+  - The goal is to remove a notable reduction in the signal provided due to leak and capacitance issues. Both a theoretical demonstration of the issue and intial results presenting the benefits of the new Solid State Relay based on saline tests in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section</a> in the solution #1 Section
+  - With this fix, we are estimated only 
+2. Adjusting the 
+
 # REFERENCES
 [1]	B. D. Greenberg et al., “Three-Year Outcomes in Deep Brain Stimulation for Highly Resistant Obsessive–Compulsive Disorder,” Neuropsychopharmacology, vol. 31, no. 11, pp. 2384–2393, Nov. 2006, doi: 10.1038/sj.npp.1301165.
 
