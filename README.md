@@ -69,8 +69,16 @@ Look forward <a href=https://github.com/esahaicu/BRAINSBoard/>HERE</a> for more 
     - ***10µA leak current*** on the isolated channels that is solved in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section </a> under issue #1 **vs** a ***250nA leak current*** in the newer Solid State Relay
     - ***50pF output capacitance*** on the isolated channels that is solved in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section </a> under issue #1 **vs** a ***5pF leak current*** in the newer Solid State Relay
   - The goal is to remove a notable reduction in the signal provided due to leak and capacitance issues. Both a theoretical demonstration of the issue and intial results presenting the benefits of the new Solid State Relay based on saline tests in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section</a> in the solution #1 Section
-  - With this fix, we are estimated only 
-2. Adjusting the 
+  - With this fix, we estimate only a 3% signal loss rather than estimated 30% loss of the signal current with high impedance electrodes.
+2. Replace connector to any microcontroller with an embedded RP2040 microprocessor and develop the BRAINSBoard as the microcontroller itself to be able to implement more electrical isolation.
+  - One noticeable issue (Problem #2) is that, when sending serial commands from a computer and through an Arduino where said computer is the power source for the board, there will be some introduced noise that is present in the LFP Band in Neuropixel recordings (though no noticeable noise in the AP Band of the recording) that is always present when a serial command is sent from the computer to the board.
+  - We suspect this is due to ground loops forming between the building ground and the ground of the computer that is powering the Arduino
+  - The most effective solution is to isolate the USB power, utilize an external power source, and allow for  
+3. Update Connectors
+  - Update the 2 2x8 Box Connctors to a more universal neuroscience connector with the NanoZ 2x<a href="(https://www.digikey.com/en/products/detail/samtec-inc/MOLC-110-01-S-Q/6695611)">32 Samtec Connector (MOLC‐110‐01‐S‐Q)</a>
+    - This will make it easier to connect to varying electrode headstages utilizing already shielded products like <a href="https://plexon.com/products/nanoz-adaptors-omnetics/#1585316524959-3f3aca9b-4d99">this one from Plexon</a>.
+    - This also allows for easy modifications to upgrade the board to be compatible with 32 and 64 channel electrodes.
+  - 
 
 # REFERENCES
 [1]	B. D. Greenberg et al., “Three-Year Outcomes in Deep Brain Stimulation for Highly Resistant Obsessive–Compulsive Disorder,” Neuropsychopharmacology, vol. 31, no. 11, pp. 2384–2393, Nov. 2006, doi: 10.1038/sj.npp.1301165.
