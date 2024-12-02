@@ -73,18 +73,31 @@ Look forward <a href=https://github.com/esahaicu/BRAINSBoard/>HERE</a> for more 
 2. Replace connector to any microcontroller with an embedded RP2040 microprocessor and develop the BRAINSBoard as the microcontroller itself to be able to implement more electrical isolation.
   - One noticeable issue (Problem #2) is that, when sending serial commands from a computer and through an Arduino where said computer is the power source for the board, there will be some introduced noise that is present in the LFP Band in Neuropixel recordings (though no noticeable noise in the AP Band of the recording) that is always present when a serial command is sent from the computer to the board.
   - We suspect this is due to ground loops forming between the building ground and the ground of the computer that is powering the Arduino
-  - The most effective solution is to isolate the USB power, utilize an external power source, and allow for  
-3. Update Connectors
+  - The most effective solution is to isolate the USB power, utilize an external power source, add sync and clock functionality, and allow for more customizability is by implementing a microprocessor like the RP2040.
+3. Update Connectors:
   - USB and Power Connector Updates:
-   - Since the plan is to embed a microprocessor directly onto the BRAINSBoard, we will utilize a USB-C connector directly on the board.
-   - A 5.5mm DC Barrel Jack will also be added for external power.
-  - Update the 2 2x8 Box Connctors to a more universal neuroscience connector with the NanoZ 2x<a href="(https://www.digikey.com/en/products/detail/samtec-inc/MOLC-110-01-S-Q/6695611)">32 Samtec Connector (MOLC‐110‐01‐S‐Q)</a>
-   - This will make it easier to connect to varying electrode headstages utilizing already shielded products like <a href="https://plexon.com/products/nanoz-adaptors-omnetics/#1585316524959-3f3aca9b-4d99">this one from Plexon</a>.
-   - This also allows for easy modifications to upgrade the board to be compatible with 32 and 64 channel electrodes.
-  - Omnetics18 Connector for a <a href="https://intantech.com/RHS_headstages.html?tabSelect=RHS16ch&yPos=0">16-Channel Recording Headstage</a>
-   - The plan is to implement more Solid State relays for a similar isolated input from the electrodes through the BRAINSBoard for a 16-channel recording headstage
-   - The board will be setup to connect to the recording state instead of having a "floating" state as it does now when SP3T state is all LOW.
-  - BNC Connectors along with male headers for microcontroller I/O 
+    - Since the plan is to embed a microprocessor directly onto the BRAINSBoard, we will utilize a USB-C connector directly on the board.
+    - A 5.5mm DC Barrel Jack will also be added for external power.
+  - Update the 2 2x8 Box Connctors to a more universal neuroscience connector with the NanoZ 2x<a href="(https://www.digikey.com/en/products/detail/samtec-inc/MOLC-110-01-S-Q/6695611)">32 Samtec Connector (MOLC‐110‐01‐S‐Q)</a>:
+    - This will make it easier to connect to varying electrode headstages utilizing already shielded products like <a href="https://plexon.com/products/nanoz-adaptors-omnetics/#1585316524959-3f3aca9b-4d99">this one from Plexon</a>.
+    - This also allows for easy modifications to upgrade the board to be compatible with 32 and 64 channel electrodes.
+  - Omnetics18 Connector for a <a href="https://intantech.com/RHS_headstages.html?tabSelect=RHS16ch&yPos=0">16-Channel Recording Headstage</a>:
+    - The plan is to implement more Solid State relays for a similar isolated input from the electrodes through the BRAINSBoard for a 16-channel recording headstage
+    - The board will be setup to connect to the recording state instead of having a "floating" state as it does now when SP3T state is all LOW.
+  - BNC Connectors along with male headers for microcontroller I/O
+4. Update Hardware and Software Features:
+  - Add in a full, standalone, downloadable control GUI for Mac, Windows, and Linux.
+  - Work on setting up an Open-Ephys Plugin to work alongside the board.
+  - Setup a physical screen and buttons to manually set up some features.
+
+### Beyond BRAINSBoard V3
+
+1. Create modular systems as follows:
+   a. A base module that serves as a control center for all functions.
+   b. Attachable 16-channel shields so that more channels can be added.
+   c. Additional custom connectors to other common neuroscience tools (ie. recording devices, optogenetic tools, I/O breakouts, etc.)
+2. FPGA compatibility to work towards closed-loop stimulation
+3. Some system that allows for varying resistance over each channel to customize current sent to each individual electrode while still only requiring one Analog Isolated Stimulator. 
 
 # REFERENCES
 [1]	B. D. Greenberg et al., “Three-Year Outcomes in Deep Brain Stimulation for Highly Resistant Obsessive–Compulsive Disorder,” Neuropsychopharmacology, vol. 31, no. 11, pp. 2384–2393, Nov. 2006, doi: 10.1038/sj.npp.1301165.
