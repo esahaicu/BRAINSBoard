@@ -75,10 +75,16 @@ Look forward <a href=https://github.com/esahaicu/BRAINSBoard/>HERE</a> for more 
   - We suspect this is due to ground loops forming between the building ground and the ground of the computer that is powering the Arduino
   - The most effective solution is to isolate the USB power, utilize an external power source, and allow for  
 3. Update Connectors
+  - USB and Power Connector Updates:
+   - Since the plan is to embed a microprocessor directly onto the BRAINSBoard, we will utilize a USB-C connector directly on the board.
+   - A 5.5mm DC Barrel Jack will also be added for external power.
   - Update the 2 2x8 Box Connctors to a more universal neuroscience connector with the NanoZ 2x<a href="(https://www.digikey.com/en/products/detail/samtec-inc/MOLC-110-01-S-Q/6695611)">32 Samtec Connector (MOLC‐110‐01‐S‐Q)</a>
-    - This will make it easier to connect to varying electrode headstages utilizing already shielded products like <a href="https://plexon.com/products/nanoz-adaptors-omnetics/#1585316524959-3f3aca9b-4d99">this one from Plexon</a>.
-    - This also allows for easy modifications to upgrade the board to be compatible with 32 and 64 channel electrodes.
-  - 
+   - This will make it easier to connect to varying electrode headstages utilizing already shielded products like <a href="https://plexon.com/products/nanoz-adaptors-omnetics/#1585316524959-3f3aca9b-4d99">this one from Plexon</a>.
+   - This also allows for easy modifications to upgrade the board to be compatible with 32 and 64 channel electrodes.
+  - Omnetics18 Connector for a <a href="https://intantech.com/RHS_headstages.html?tabSelect=RHS16ch&yPos=0">16-Channel Recording Headstage</a>
+   - The plan is to implement more Solid State relays for a similar isolated input from the electrodes through the BRAINSBoard for a 16-channel recording headstage
+   - The board will be setup to connect to the recording state instead of having a "floating" state as it does now when SP3T state is all LOW.
+  - BNC Connectors along with male headers for microcontroller I/O 
 
 # REFERENCES
 [1]	B. D. Greenberg et al., “Three-Year Outcomes in Deep Brain Stimulation for Highly Resistant Obsessive–Compulsive Disorder,” Neuropsychopharmacology, vol. 31, no. 11, pp. 2384–2393, Nov. 2006, doi: 10.1038/sj.npp.1301165.
