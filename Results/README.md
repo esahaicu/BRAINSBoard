@@ -1,7 +1,7 @@
-# BRAINSBoard
+# BRAINSBoard Results
 
 <p align="center">
- <img src=images/BRAINSBoardFinalProfile.png/>
+ <img src=/Results/Figures/ResultsExpSetup.png/>
 </p>
 
 # Abstract
