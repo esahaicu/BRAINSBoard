@@ -65,30 +65,30 @@ Look forward <a href=https://github.com/esahaicu/BRAINSBoard/>HERE</a> for more 
 ### By January 2025 - BRAINSBoard V3
 
 1. Switching the <a href="https://cdn1-originals.webdamdb.com/14154_151801265?cache=1732603283&response-content-disposition=inline;filename=PAA193.pdf&response-content-type=application/pdf&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTQxNTRfMTUxODAxMjY1P2NhY2hlPTE3MzI2MDMyODMmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9UEFBMTkzLnBkZiZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24vcGRmIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoyMTQ3NDE0NDAwfX19XX0_&Signature=KEhrRK-vYwk0ggFpEj8wrtBzJmtt7BLaQpuE0VpQ6zIkfrLoIbx35HtgxQp~mzP1G8wXjwMnEd2zExPyTWqPD8bcKLJTfQP483ssKtQgMZSv9g4kMZWmTeWzq72~uDpBGg3QDFOSoxpoQ4pNKS8JEbIiLR73WmyYWHy~x8HXiKn1oemtWMO5ZJkIW832eBlLtIbZF6mad9GiruNMyseB5M5vAtnD5xpdgm85AQOtLEowx-~A6fRC1GCmJKfGsC2NgjsDT588YpRlWTskNJhZ7zaYhGDO9GeALtxS0ZmNQy8JBUkahIwGCS4s0QiuV7Lvj7qD-rCDa4SswuSvqyvkgw__&Key-Pair-Id=APKAI2ASI2IOLRFF2RHA">current Solid State Relay</a> to a <a href="https://cdn1-originals.webdamdb.com/12956_135154079?cache=1729648393&response-content-disposition=inline;filename=OAA160.pdf&response-content-type=application/pdf&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTI5NTZfMTM1MTU0MDc5P2NhY2hlPTE3Mjk2NDgzOTMmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9T0FBMTYwLnBkZiZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24vcGRmIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoyMTQ3NDE0NDAwfX19XX0_&Signature=AXHYEUwQeGlJv0wT-6YeKM1RikhenEa59iUFNI39tTOkFUg2SDUpqC-E0H8ncd0Q7HQ08yBqlckWgHi77eyu01f4YnqluGsyMgwveAA9lgVK35F8CKfdHTVbH9U3SGNk3P30u9mg-Cwjt3lLbItZ5srsjdkrtmY~ygdudVYNud--zzGRss3OerThwrDle2YjYWR0AnRQs9qA01ERjdj3iEWlwWsxjy~kbYyX732hxke7vOttaN5PPq~9jG1AofzusaQnYLKNld86RVlLb~SNYGWz9AfdbnLhnX-XlATFZXGDKhS-sPZHe1oXKVAZrJjDEzQASST77NQPldvNG~NaTg__&Key-Pair-Id=APKAI2ASI2IOLRFF2RHA">better Solid State Relay</a> for microstimulation with the current devices.
-  - The current SSR has two key issues noted in this version 2 of the BRAINSBoard:
-    - ***10µA leak current*** on the isolated channels that is solved in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section </a> under issue #1 **vs** a ***250nA leak current*** in the newer Solid State Relay
-    - ***50pF output capacitance*** on the isolated channels that is solved in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section </a> under issue #1 **vs** a ***5pF leak current*** in the newer Solid State Relay
-  - The goal is to remove a notable reduction in the signal provided due to leak and capacitance issues. Both a theoretical demonstration of the issue and intial results presenting the benefits of the new Solid State Relay based on saline tests in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section</a> in the solution #1 Section
-  - With this fix, we estimate only a 3% signal loss rather than estimated 30% loss of the signal current with high impedance electrodes.
+   - The current SSR has two key issues noted in this version 2 of the BRAINSBoard:
+     - ***10µA leak current*** on the isolated channels that is solved in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section </a> under issue #1 **vs** a ***250nA leak current*** in the newer Solid State Relay
+     - ***50pF output capacitance*** on the isolated channels that is solved in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section </a> under issue #1 **vs** a ***5pF leak current*** in the newer Solid State Relay
+   - The goal is to remove a notable reduction in the signal provided due to leak and capacitance issues. Both a theoretical demonstration of the issue and intial results presenting the benefits of the new Solid State Relay based on saline tests in the <a href="https://github.com/esahaicu/BRAINSBoard/Results">results section</a> in the solution #1 Section
+   - With this fix, we estimate only a 3% signal loss rather than estimated 30% loss of the signal current with high impedance electrodes.
 2. Replace connector to any microcontroller with an embedded RP2040 microprocessor and develop the BRAINSBoard as the microcontroller itself to be able to implement more electrical isolation.
-  - One noticeable issue (Problem #2) is that, when sending serial commands from a computer and through an Arduino where said computer is the power source for the board, there will be some introduced noise that is present in the LFP Band in Neuropixel recordings (though no noticeable noise in the AP Band of the recording) that is always present when a serial command is sent from the computer to the board.
-  - We suspect this is due to ground loops forming between the building ground and the ground of the computer that is powering the Arduino
-  - The most effective solution is to isolate the USB power, utilize an external power source, add sync and clock functionality, and allow for more customizability is by implementing a microprocessor like the RP2040.
+   - One noticeable issue (Problem #2) is that, when sending serial commands from a computer and through an Arduino where said computer is the power source for the board, there will be some introduced noise that is present in the LFP Band in Neuropixel recordings (though no noticeable noise in the AP Band of the recording) that is always present when a serial command is sent from the computer to the board.
+   - We suspect this is due to ground loops forming between the building ground and the ground of the computer that is powering the Arduino
+   - The most effective solution is to isolate the USB power, utilize an external power source, add sync and clock functionality, and allow for more customizability is by implementing a microprocessor like the RP2040.
 3. Update Connectors:
-  - USB and Power Connector Updates:
-    - Since the plan is to embed a microprocessor directly onto the BRAINSBoard, we will utilize a USB-C connector directly on the board.
-    - A 5.5mm DC Barrel Jack will also be added for external power.
-  - Update the 2 2x8 Box Connctors to a more universal neuroscience connector with the NanoZ 2x<a href="(https://www.digikey.com/en/products/detail/samtec-inc/MOLC-110-01-S-Q/6695611)">32 Samtec Connector (MOLC‐110‐01‐S‐Q)</a>:
-    - This will make it easier to connect to varying electrode headstages utilizing already shielded products like <a href="https://plexon.com/products/nanoz-adaptors-omnetics/#1585316524959-3f3aca9b-4d99">this one from Plexon</a>.
-    - This also allows for easy modifications to upgrade the board to be compatible with 32 and 64 channel electrodes.
-  - Omnetics18 Connector for a <a href="https://intantech.com/RHS_headstages.html?tabSelect=RHS16ch&yPos=0">16-Channel Recording Headstage</a>:
-    - The plan is to implement more Solid State relays for a similar isolated input from the electrodes through the BRAINSBoard for a 16-channel recording headstage
-    - The board will be setup to connect to the recording state instead of having a "floating" state as it does now when SP3T state is all LOW.
-  - BNC Connectors along with male headers for microcontroller I/O
+   - USB and Power Connector Updates:
+     - Since the plan is to embed a microprocessor directly onto the BRAINSBoard, we will utilize a USB-C connector directly on the board.
+     - A 5.5mm DC Barrel Jack will also be added for external power.
+   - Update the 2 2x8 Box Connctors to a more universal neuroscience connector with the NanoZ 2x<a href="(https://www.digikey.com/en/products/detail/samtec-inc/MOLC-110-01-S-Q/6695611)">32 Samtec Connector (MOLC‐110‐01‐S‐Q)</a>:
+     - This will make it easier to connect to varying electrode headstages utilizing already shielded products like <a href="https://plexon.com/products/nanoz-adaptors-omnetics/#1585316524959-3f3aca9b-4d99">this one from Plexon</a>.
+     - This also allows for easy modifications to upgrade the board to be compatible with 32 and 64 channel electrodes.
+   - Omnetics18 Connector for a <a href="https://intantech.com/RHS_headstages.html?tabSelect=RHS16ch&yPos=0">16-Channel Recording Headstage</a>:
+     - The plan is to implement more Solid State relays for a similar isolated input from the electrodes through the BRAINSBoard for a 16-channel recording headstage
+     - The board will be setup to connect to the recording state instead of having a "floating" state as it does now when SP3T state is all LOW.
+   - BNC Connectors along with male headers for microcontroller I/O
 4. Update Hardware and Software Features:
-  - Add in a full, standalone, downloadable control GUI for Mac, Windows, and Linux.
-  - Work on setting up an Open-Ephys Plugin to work alongside the board.
-  - Setup a physical screen and buttons to manually set up some features.
+   - Add in a full, standalone, downloadable control GUI for Mac, Windows, and Linux.
+   - Work on setting up an Open-Ephys Plugin to work alongside the board.
+   - Setup a physical screen and buttons to manually set up some features.
 
 ### Beyond BRAINSBoard V3
 
