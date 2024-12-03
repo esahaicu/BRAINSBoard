@@ -15,7 +15,6 @@
  <img src=/Results/Figures/datasheet2.PNG/>
 </p>
 
-*** *denotes dependancy on software efficiency and specific microcontroller used* 
 
 
 
@@ -32,6 +31,8 @@
 <p align="center">
  <img src=/Results/Figures/datasheet1.PNG/>
 </p>
+
+*** *denotes dependancy on software efficiency and specific microcontroller used* 
 
  - 
 
