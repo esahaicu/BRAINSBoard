@@ -11,25 +11,17 @@
  <img src=/Results/Figures/ResultsExpSetup.png/>
 </p>
 
-$
-\begin{center}
-\begin{tabular}{||c c c c||} 
- \hline
-  & Octal Latch & SP3T & Solid State Relay \\ [0.5ex] 
- \hline\hline
- 1 & 6 & 87837 & 787 \\ 
- \hline
- 2 & 7 & 78 & 5415 \\
- \hline
- 3 & 545 & 778 & 7507 \\
- \hline
- 4 & 545 & 18744 & 7560 \\
- \hline
- 5 & 88 & 788 & 6344 \\ [1ex] 
- \hline
-\end{tabular}
-\end{center}
-$
+|                        |Arduino Microcontroller|   Octal Latches   |     SP3T Switches   |  Solid State Relays | Units |
+|:----------------------:|:---------------------:|:-----------------:|:-------------------:|:-------------------:|:-----:|
+| **Delay Time**         | Software Dependant    | Electrode Channel |    Arduino Pins     | Pin 16 + 1 + 5 + 6  |   μs  |
+| **Leak Current**       | Pin 16 + 1 + 7 + 8    | Electrode Channel |    Arduino Pins     | Pin 16 + 1 + 5 + 6  |   μA  |
+| **Output Capacitance** | Pin 16 + 1 + 9 + 10   | Electrode Channel |    Arduino Pins     | Pin 16 + 1 + 5 + 6  |   μA  |
+| **Input Voltage**      | Pin 16 + 1 + 14 + 15  | Electrode Channel |    Arduino Pins     | Pin 16 + 1 + 5 + 6  | Units |
+| **Output Voltage**     | Pin 16 + 2 + 5 + 6    | Electrode Channel |    Arduino Pins     | Pin 16 + 1 + 5 + 6  | Units |
+| Channel **6**          | Pin 16 + 2 + 7 + 8    | Electrode Channel |    Arduino Pins     | Pin 16 + 1 + 5 + 6  | Units |
+| Channel **7**          | Pin 16 + 2 + 9 + 10   | Electrode Channel |    Arduino Pins     | Pin 16 + 1 + 5 + 6  | Units |
+
+
 
 
 ### 2. Rapid and Customizable Switching and Configurations of electrode contacts
