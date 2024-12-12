@@ -43,7 +43,7 @@ We will break down the components here with a general explanation of their benef
 
 
 ![Box Headers Pinout](/images/eStim_CONNECTORS.png)
-- $\textbf{\color{red}Banana Connectors:}$ Connects to cathode and anode pulses from an Isolated Analog Power Stimulator (preferred STG5) and a Signal Ground that can be connected to the same common ground as the electrode and stimulator.
+- $\textbf{\color{red}Banana Connectors:}$ Connects to cathode and anode pulses from an Isolated Analog Power Stimulator (preferred A-M 4100) and a Signal Ground that can be connected to the same common ground as the electrode and stimulator.
 
 ## External Outputs:
 
